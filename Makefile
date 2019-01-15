@@ -23,6 +23,11 @@ java/results.txt: java/Dockerfile java/Main.java
 	docker build -t gc-java java
 	docker run gc-java > $@
 
+java11/results.txt: java11/Dockerfile java11/Main.java
+	docker build -t gc-java-11 java11
+	docker run gc-java-11 > $@
+
+
 ocaml/results.txt: ocaml/Dockerfile ocaml/_tags ocaml/main.ml
 	docker build -t gc-ocaml ocaml
 	docker run gc-ocaml > $@
